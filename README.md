@@ -11,9 +11,8 @@ Provide a brief description of your project here.
 3. [Setup](#setup)
 4. [Running the Application](#running-the-application)
 5. [Docker Instructions](#docker-instructions)
-6. [Environment Variables](#environment-variables)
-7. [Usage](#usage)
-8. [Credits](#credits)
+6. [Usage](#usage)
+7. [Credits](#credits)
 
 ## Prerequisites
 
@@ -30,8 +29,8 @@ Ensure you have the following installed:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/TawongaTaibu/politicalcandidateTT.git
-    cd your-repo
+    git clone https://github.com/TawongaTaibu/politicalcandidate4.git
+    cd politicalcandidate4
     ```
 
 2. **Create a virtual environment:**
@@ -44,12 +43,12 @@ Ensure you have the following installed:
 
     - On Windows:
       ```bash
-      venv\Scripts\activate
+      TTenv\Scripts\activate
       ```
 
     - On macOS/Linux:
       ```bash
-      source venv/bin/activate
+      source TTenv/bin/activate
       ```
 
 4. **Install the required packages:**
@@ -60,11 +59,7 @@ Ensure you have the following installed:
 
 ## Setup
 
-1. **Create or update environment variables:**
-
-    Ensure any required environment variables are set up. Create a `.env` file if necessary, and include any sensitive information such as passwords or API keys.
-
-2. **Apply database migrations (if applicable):**
+1. **Apply database migrations (if applicable):**
 
     ```bash
     python manage.py migrate
@@ -80,36 +75,36 @@ Ensure you have the following installed:
     python manage.py runserver
     ```
 
-   Run python manage.py runserver in your terminal and follow the link provided to start the application.
+   Run the "python manage.py runserver" command to start your application. 
    
+3. **Access the application in your browser:**
 
-2. **Access the application in your browser:**
+    After running the command, you'll be redirected by clicking the `http://localhost:8000` or the appropriate URL specified in your application.
 
-    Visit `http://localhost:8000` or the appropriate URL specified in your application.
-
+5.
 ### Using Docker
 
 1. **Build the Docker image:**
 
     ```bash
-    docker build -t politicalcandidate .
+    docker build -t dfa .
+    
     ```
+
+    Using docker, we can create an image in this case called "dfa" which is our django app name
 
 2. **Run the Docker container:**
 
     ```bash
-    docker run -p 8000:8000 politicalcandidate
+    docker run -p 8000:8000 dfa
     ```
 
-   Adjust the port and image name as needed.
+   By running this command you ensure that the docker container 'dfa' is ready to go.
 
 3. **Access the application in your browser:**
 
     Visit `http://localhost:8000` or the appropriate URL specified in your Docker configuration.
 
-## Environment Variables
-
-Make sure to add sensitive information such as passwords or API tokens to a `.env` file. This file should not be committed to your Git repository. Ensure your `.gitignore` file is configured to exclude this file.
 
 ## Usage
 Firstly, you have to open the projects folder on your IDE and click *RUN* or by clicking 
@@ -121,3 +116,7 @@ For example, if a user is willing to view the news of the political party he/she
 
 ## Credits
 
+https://www.techtarget.com/searchsoftwarequality/definition/documentation#:~:text=Software%20documentation%20provides%20information%20about,such%20as%20installation%20and%20troubleshooting.
+https://www.tutorialspoint.com/docker/index.html
+
+---
